@@ -25,6 +25,35 @@ public class App {
         System.out.println("Kelas          : " + kelas);
         System.out.println("==================================");
 
+        System.out.println();
 
+        // Variabel 2 ( Aritmatika )
+        int x = 10, y = 3; // Variabel boleh sama
+        System.out.println("==================================");
+        System.out.println("Perjumlahan     : " + (x + y)); // Perjumlahan
+        System.out.println("Pengurangan     : " + (x - y));
+        System.out.println("Perkalian       : " + (x * y));
+        System.out.println("Pembagian       : " + (x % y));
+        System.out.println("==================================");
+
+        System.out.println();
+        // Aritmatika 2
+        System.out.println("==================================");
+        System.out.println("Tambah    : " + (x+=5));
+        System.out.println("Kurang    : " + (x-=3));
+        System.out.println("Kali      : " + (x*=2));
+        System.out.println("Bagi      : " + (x/=4));
+        System.out.println("Modulus   : " + (x%=6));
+        System.out.println("==================================");
+
+        System.out.println();
+        // Logika ++
+        int m = 3;
+        int o = 8 - m++;
+        int p = 8 - ++m;
+        System.out.println("==================================");
+        System.out.println("o       : " + o);
+        System.out.println("p       : " + p);
+        System.out.println("==================================");
     }
 }
