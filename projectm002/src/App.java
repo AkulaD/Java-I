@@ -30,7 +30,7 @@ public class App {
         // Variabel 2 ( Aritmatika )
         int x = 10, y = 3; // Variabel boleh sama
         System.out.println("==================================");
-        System.out.println("Perjumlahan     : " + (x + y)); // Perjumlahan
+        System.out.println("Perjumlahan     : " + (x + y));
         System.out.println("Pengurangan     : " + (x - y));
         System.out.println("Perkalian       : " + (x * y));
         System.out.println("Pembagian       : " + (x % y));
