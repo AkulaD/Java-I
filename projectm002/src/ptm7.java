@@ -38,43 +38,53 @@ public class ptm7 {
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("*************************************");
-                    System.out.println("Nasi Goreng");
-                    System.out.println("Harga : Rp 12.500");
-                    System.out.println("-------------------------------------");
-                    System.out.println("Total Harga : Rp " + jumlah * 12500);
-                    System.out.println("*************************************");
+                    menu = "Nasi Goreng";
+                    harga = 12500;
+                    // System.out.println("*************************************");
+                    // System.out.println("Nasi Goreng");
+                    // System.out.println("Harga : Rp 12.500");
+                    // System.out.println("-------------------------------------");
+                    // System.out.println("Total Harga : Rp " + jumlah * 12500);
+                    // System.out.println("*************************************");
                     break;
                 case 2:
-                    System.out.println("*************************************");
-                    System.out.println("Nasi Kucing");
-                    System.out.println("Harga : Rp 12.000");
-                    System.out.println("-------------------------------------");
-                    System.out.println("Total Harga : Rp " + (jumlah * 12000));
-                    System.out.println("*************************************");
+                    menu = "Nasi Kucing";
+                    harga = 5000;
+                    // System.out.println("*************************************");
+                    // System.out.println("Nasi Kucing");
+                    // System.out.println("Harga : Rp 5.000");
+                    // System.out.println("-------------------------------------");
+                    // System.out.println("Total Harga : Rp " + (jumlah * 5000));
+                    // System.out.println("*************************************");
                     break;
                 case 3:
-                    System.out.println("*************************************");
-                    System.out.println("Nasi Kuning");
-                    System.out.println("Harga : Rp 15.000");
-                    System.out.println("-------------------------------------");
-                    System.out.println("Total Harga : Rp " + (jumlah * 15000));
-                    System.out.println("*************************************");
+                    menu = "Nasi Kuning";
+                    harga = 15000;
+                    // System.out.println("*************************************");
+                    // System.out.println("Nasi Kuning");
+                    // System.out.println("Harga : Rp 15.000");
+                    // System.out.println("-------------------------------------");
+                    // System.out.println("Total Harga : Rp " + (jumlah * 15000));
+                    // System.out.println("*************************************");
                     break;
                 case 4:
-                    System.out.println("*************************************");
-                    System.out.println("Nasi Uduk");
-                    System.out.println("Harga : Rp 13.000");
-                    System.out.println("-------------------------------------");
-                    System.out.println("Total Harga : Rp " + (jumlah * 13000));
-                    System.out.println("*************************************");
+                    menu = "Nasi Uduk";
+                    harga = 13000;
+                    // System.out.println("*************************************");
+                    // System.out.println("Nasi Uduk");
+                    // System.out.println("Harga : Rp 13.000");
+                    // System.out.println("-------------------------------------");
+                    // System.out.println("Total Harga : Rp " + (jumlah * 13000));
+                    // System.out.println("*************************************");
                     break;
                 case 5:
-                    System.out.println("*************************************");
-                    System.out.println("Nasi Padang");
-                    System.out.println("Harga : Rp 14.000");
-                    System.out.println("-------------------------------------");
-                    System.out.println("Total Harga : Rp " + (jumlah * 14000));
+                    menu = "Nasi Padang";
+                    harga = 14000;
+                    // System.out.println("*************************************");
+                    // System.out.println("Nasi Padang");
+                    // System.out.println("Harga : Rp 14.000");
+                    // System.out.println("-------------------------------------");
+                    // System.out.println("Total Harga : Rp " + (jumlah * 14000));
                     break;
 
                 default:
@@ -82,7 +92,19 @@ public class ptm7 {
                     break;
 
             }
-        }else{
+
+                double total = harga * jumlah;
+                System.out.println("=====================================");
+                System.out.println("----------- LIST PESANAN ------------");
+                System.out.println("Pesanan     : " + menu);
+                System.out.println("Harga       : Rp " + harga);
+                System.out.println("Jumlah      : " + jumlah);
+                System.out.println("-------------------------------------");
+                System.out.println("Total Harga : Rp " + total);
+                System.out.println("=====================================");
+
+
+            }else{
             System.out.println("-------------------------------------");
             System.out.println("============ Login Gagal ============");
             System.out.println("-------------------------------------");

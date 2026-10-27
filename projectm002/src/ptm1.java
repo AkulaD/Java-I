@@ -1,4 +1,4 @@
-public class App {
+public class ptm1 {
     public static void main(String[] args) throws Exception {
         int umur = 17;
         // System.out.print(umur);
