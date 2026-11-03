@@ -1,78 +1,81 @@
-// 1. ABSTRACTION (Kerangka dasar tiket)
-abstract class Tiket {
-    // 2. ENCAPSULATION (Data dikunci agar aman)
-    private String namaPenumpang;
-    private double hargaDasar;
+import java.util.Scanner;
 
-    public Tiket(String nama, double harga) {
-        this.namaPenumpang = nama;
-        this.hargaDasar = harga;
-    }
-
-    public String getNamaPenumpang() { return namaPenumpang; }
-    public double getHargaDasar() { return hargaDasar; }
-
-    abstract void cetakTiket(); // Metode abstrak
-}
-
-// 3. INHERITANCE (TiketKonser mewarisi sifat Tiket)
-class TiketKonser extends Tiket {
-    public TiketKonser(String nama, double harga) {
-        super(nama, harga);
-    }
-
-    // 4. POLYMORPHISM (Bentuk cetak khusus konser)
-    @Override
-    void cetakTiket() {
-        double subtotal = getHargaDasar();
-        double total = getHargaDasar() + 50000; // Harga + Pajak Konser
-        System.out.println("=============== Ticket Konser ===============");
-        System.out.println("Nama    : " + getNamaPenumpang());
-        System.out.println("---------------------------------------------");
-        System.out.println("Harga   : " + subtotal);
-        System.out.println("Pajak   : " + 50000);
-        System.out.println("Total   : " + total);
-        System.out.println("---------------------------------------------");
-        System.out.println("======== Terimakasih Telah Memesan ==========");
-        System.out.println();
-    }
-}
-
-// 3. INHERITANCE (TiketBioskop mewarisi sifat Tiket)
-class TiketBioskop extends Tiket {
-    public TiketBioskop(String nama, double harga) {
-        super(nama, harga);
-    }
-
-    // 4. POLYMORPHISM (Bentuk cetak khusus bioskop)
-    @Override
-    void cetakTiket() {
-        double subtotal = getHargaDasar();
-        double total = getHargaDasar() + 5000; // Harga + Admin Bioskop
-        System.out.println("=============== Ticket Biskop ===============");
-        System.out.println("Nama    : " + getNamaPenumpang());
-        System.out.println("---------------------------------------------");
-        System.out.println("Harga   : " + subtotal);
-        System.out.println("Pajak   : " + 5000);
-        System.out.println("Total   : " + total);
-        System.out.println("---------------------------------------------");
-        System.out.println("======== Terimakasih Telah Memesan ==========");
-        System.out.println();
-    }
-}
-
-// KELAS UTAMA ANDA
 public class ptm10 {
     public static void main(String[] args){
-        // Catatan: PBO singkatan dari Pemrograman Berorientasi Objek (bukan Procedural)
-        System.out.println("--- SISTEM PEMESANAN TIKET (OOP/PBO) ---");
+        Scanner input = new Scanner(System.in);
 
-        // Penerapan POLYMORPHISM saat memesan tiket
-        Tiket tiket1 = new TiketKonser("Shaka", 500000);
-        Tiket tiket2 = new TiketBioskop("Banu", 45000);
+        // Soal Pertama:
+        System.out.println("=====================================");
+        System.out.print("Masukan nilai : ");
+        int nilai = input.nextInt();
 
-        // Memanggil metode yang sama, menghasilkan output berbeda
-        tiket1.cetakTiket();
-        tiket2.cetakTiket();
+        if (nilai >= 85) {
+            System.out.println("Nilai anda A");
+        } else if (nilai >= 70) {
+            System.out.println("Nilai anda B");
+        } else if (nilai > 55) {
+            System.out.println("Nilai anda C");
+        } else {
+            System.out.println("Nilai anda E");
+        }
+
+        System.out.println("=====================================");
+
+        // Soal Kedua:
+        System.out.println("Pengulangan dengan for");
+        for(int i =2; i <= 20; i+=2){
+            System.out.print(i + " ");
+        }
+        System.out.println("");
+        System.out.println("-------------------------------------");
+        
+        System.out.println("Pengurangan dengan While");
+        int j = 2;
+        while(j <= 20){
+            System.out.print(j + " ");
+            j += 2;
+        }
+        System.out.println("");
+        System.out.println("-------------------------------------");
+
+        System.out.println("Pengungrangan dengan Do-While");
+        int k = 2;
+        do {
+            System.out.print(k + " ");
+            k += 2;
+        } while(k <= 20);
+        System.out.println("");
+
+        System.out.println("=====================================");
+
+        // Pertemuan 10 -- CONTENT (ABSTRACTION, ENCAPSULATION, INHERITANCE, POLYMORPHISM)
+        Mahasiswa mhs = new Mahasiswa();
+
+        mhs.setNama("Shaka Banuasta");
+        mhs.setNim(2510117);
+        mhs.setKelas("03SIFM002");
+
+        System.out.println("");
+
+        System.out.println("========== Data Mahasiswa ===========");
+        System.out.println("Nama Lengkap   : " + mhs.getNama());
+        System.out.println("NIM            : " + mhs.getNim());
+        System.out.println("Kelas          : " + mhs.getKelas());
+        System.out.println("=====================================");
+
+        KetuaKelas ketua = new KetuaKelas();
+
+        ketua.setJabatan("Ketua Kelas");
+        ketua.setNama("Headzer Badger");
+        ketua.setNim(25103007);
+        ketua.setKelas("03SIFM002");
+        ketua.setJabatan("Ketua Kelas");
+
+        System.out.println("========= Data Ketua Kelas ==========");
+        System.out.println("Nama Lengkap   : " + ketua.getNama());
+        System.out.println("NIM            : " + ketua.getNim());
+        System.out.println("Kelas          : " + ketua.getKelas());
+        System.out.println("Jabatan        : " + ketua.getJabatan());
+        System.out.println("=====================================");
     }
 }
